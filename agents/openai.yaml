@@ -1,0 +1,4 @@
+interface:
+  display_name: "My Squad Tracker"
+  short_description: "Observe squad work and maintain durable Onmove context"
+  default_prompt: "Use $my-squad-tracker for this squad-tracking request."

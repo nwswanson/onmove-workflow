@@ -1,0 +1,7 @@
+interface:
+  display_name: "My Evidence Collection"
+  short_description: "Collect scoped changes with explicit source coverage"
+  default_prompt: "Use $my-collect-evidence for this squad-tracking request."
+
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,7 @@
+interface:
+  display_name: "My Squad Assessment"
+  short_description: "Assess outcomes, risks and squad practices"
+  default_prompt: "Use $my-assess-squad for this squad-tracking request."
+
+policy:
+  allow_implicit_invocation: false

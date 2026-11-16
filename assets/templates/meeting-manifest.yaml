@@ -1,0 +1,43 @@
+# Logical import manifest; not a Zoom API configuration or scheduled ingestion job.
+# Supply the actual file/attachment through the harness. Null means unknown.
+schema_version: 1
+transport:
+  mode: supplied
+meeting_uid: null
+title: null
+occurred_at: null
+timezone: America/Chicago
+squad_uids: []
+work_uids: []
+meeting_kind: null
+source:
+  provider: local-transcript
+  file_name: null
+  accessible_uri: null
+  content_digest: null
+  version: null
+  imported_at: null
+participants: []
+speaker_map: {}
+transcript:
+  format: null
+  has_timecodes: null
+  language: null
+  completeness: unknown
+  missing_segments: []
+  transcription_limitations: []
+provenance:
+  provided_by: null
+  attribution_confirmed: false
+  related_jira_ids: []
+  related_document_ids: []
+  related_slack_thread_ids: []
+notes: null
+# Keep speaker attribution tentative unless verified.
+# Extract work decisions, explicit commitments, questions and outcomes with locators.
+# Do not treat every spoken suggestion as an accepted decision.
+# Deduplicate reimports by meeting_uid + content_digest/version; a corrected transcript
+# is a new version. Preserve older event time and actual ingestion time separately.
+# Keep raw transcripts outside OnMove by default; store concise evidence with a
+# durable user-accessible source reference. If none exists, retain enough attributed
+# excerpt/locator to support material claims and declare the retrieval limitation.
